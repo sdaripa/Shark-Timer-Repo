@@ -1,0 +1,8 @@
+<div class="flex-spacer"></div>
+<app-timer-display #timeDisplay
+                  [time]="time$ | async"
+                  [showHundriths]="false"
+                  [canSetTime]="true"
+                  (setTime)="setTime($event)"></app-timer-display>
+<div class="flex-spacer"></div>
+<mat-progress-bar mode="determinate" [value]="percent$ | async"></mat-progress-bar>
